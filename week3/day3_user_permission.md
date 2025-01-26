@@ -36,6 +36,10 @@ Linux offers a robust and flexible user management system, which is essential fo
    ```
 
    - `-m` ensures the creation of a home directory for the user.
+   - To verify a user has been created
+     ```bash
+     sudo grep -w "new_user" /etc/passwd
+     ```
 
 2. **Deleting a User**
    To remove a user, you can use the `deluser` or `userdel` command. This removes the user and their associated home directory (if specified).
