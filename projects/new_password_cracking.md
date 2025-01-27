@@ -199,15 +199,3 @@ For complex scenarios where you need to test larger password datasets or multipl
 - **Using Multiple Machines:** Deploy Hydra across several systems to distribute the workload.
 - **Cloud Penetration Testing:** Leverage cloud-based platforms (with proper permissions) to scale computational resources.
 
----
-
-### **8. Legal and Ethical Considerations**
-Always remember:
-- Unauthorized testing is illegal and unethical.
-- The knowledge gained from this lab is intended for securing systems, not exploiting vulnerabilities.
-- Responsible disclosure is crucial: Report vulnerabilities to system administrators or owners responsibly.
-
----
-
-### Conclusion
-Understanding how tools like Hydra operate equips you with the knowledge to protect against brute-force attacks and improve system security. With great power comes great responsibility—use these techniques ethically to make systems more secure and educate others about the importance of strong passwords and proper cybersecurity practices. Keep exploring and stay curious!
