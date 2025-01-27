@@ -16,5 +16,7 @@ Welcome to **Everything Linux** – your go-to repository for learning, masterin
 ### Contribute:
 Feel free to open issues, submit pull requests, and share your own experiences and insights! Let’s make this the ultimate Linux resource for everyone.
 
+### Author: Ephraim C. Norbert
+
 ---
 
