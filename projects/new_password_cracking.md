@@ -1,4 +1,4 @@
-### Using Hydra to Crack Passwords
+## Using Hydra to Crack Passwords
 
 ## Introduction
 
