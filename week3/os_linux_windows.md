@@ -92,3 +92,187 @@ cp -r /home/user/ /backup/
 - **Execution:**
   - **Windows:** Run `backup.ps1` in PowerShell.
   - **Linux:** Run `chmod +x backup.sh && ./backup.sh`.
+
+
+--------------------------------------------------------------------------------------------------------------------------------
+
+## **1. Practice File Manipulation & Permissions**
+
+### **Windows (PowerShell & CMD) Exercises**
+#### **Exercise 1: Creating and Managing Files**
+1. Open PowerShell and create a directory called `TestFolder`:
+   ```powershell
+   New-Item -Path "C:\Users\Public\TestFolder" -ItemType Directory
+   ```
+2. Navigate to the folder:
+   ```powershell
+   cd C:\Users\Public\TestFolder
+   ```
+3. Create a text file:
+   ```powershell
+   New-Item -Name "sample.txt" -ItemType File
+   ```
+4. Write text to the file:
+   ```powershell
+   Set-Content -Path "sample.txt" -Value "Hello, this is a test file!"
+   ```
+5. Append new content to the file:
+   ```powershell
+   Add-Content -Path "sample.txt" -Value "Appending new text."
+   ```
+6. Display the file’s contents:
+   ```powershell
+   Get-Content -Path "sample.txt"
+   ```
+7. Delete the file:
+   ```powershell
+   Remove-Item -Path "sample.txt"
+   ```
+
+#### **Exercise 2: Managing Permissions**
+1. Create a new file:
+   ```powershell
+   New-Item -Name "secure.txt" -ItemType File
+   ```
+2. View the file’s permissions:
+   ```powershell
+   Get-Acl -Path "secure.txt"
+   ```
+3. Grant read-only access to all users:
+   ```powershell
+   icacls secure.txt /grant Everyone:R
+   ```
+4. Remove all permissions except for the owner:
+   ```powershell
+   icacls secure.txt /inheritance:r /remove Everyone
+   ```
+
+---
+
+### **Linux (Bash Terminal) Exercises**
+#### **Exercise 1: Creating and Managing Files**
+1. Open a terminal and create a new directory:
+   ```bash
+   mkdir ~/TestFolder
+   ```
+2. Navigate to the folder:
+   ```bash
+   cd ~/TestFolder
+   ```
+3. Create a new text file:
+   ```bash
+   touch sample.txt
+   ```
+4. Write text into the file:
+   ```bash
+   echo "Hello, this is a test file!" > sample.txt
+   ```
+5. Append text to the file:
+   ```bash
+   echo "Appending new text." >> sample.txt
+   ```
+6. Display the file’s contents:
+   ```bash
+   cat sample.txt
+   ```
+7. Delete the file:
+   ```bash
+   rm sample.txt
+   ```
+
+#### **Exercise 2: Managing Permissions**
+1. Create a new file:
+   ```bash
+   touch secure.txt
+   ```
+2. View the file’s permissions:
+   ```bash
+   ls -l secure.txt
+   ```
+3. Make the file readable and writable only by the owner:
+   ```bash
+   chmod 600 secure.txt
+   ```
+4. Make the file executable for all users:
+   ```bash
+   chmod 755 secure.txt
+   ```
+5. Change ownership of the file (requires sudo):
+   ```bash
+   sudo chown username:groupname secure.txt
+   ```
+   *(Replace `username` with an actual user and `groupname` with a valid group.)*
+
+---
+
+## **2. Basic Scripting for Automation**
+
+### **Windows PowerShell Script**
+**Scenario:** Automatically backup important documents.
+
+1. Open Notepad and enter the following script:
+   ```powershell
+   # Backup script
+   $source = "C:\Users\Public\Documents\"
+   $destination = "D:\Backup\"
+   Copy-Item -Path $source -Destination $destination -Recurse
+   ```
+2. Save it as `backup.ps1`.
+3. Run the script:
+   ```powershell
+   powershell -ExecutionPolicy Bypass -File C:\Path\To\backup.ps1
+   ```
+
+**Challenge:** Modify the script to rename backups with timestamps.
+
+---
+
+### **Linux Bash Script**
+**Scenario:** Automatically archive log files.
+
+1. Open a terminal and create a new script:
+   ```bash
+   nano backup.sh
+   ```
+2. Enter the following script:
+   ```bash
+   #!/bin/bash
+   # Backup script
+   tar -czvf ~/backup_$(date +%Y%m%d).tar.gz /var/log/
+   ```
+3. Save and exit (`CTRL+X`, then `Y`, then `Enter`).
+4. Make it executable:
+   ```bash
+   chmod +x backup.sh
+   ```
+5. Run the script:
+   ```bash
+   ./backup.sh
+   ```
+
+**Challenge:** Modify the script to delete backups older than 7 days:
+```bash
+find ~/ -name "backup_*.tar.gz" -mtime +7 -exec rm {} \;
+```
+
+---
+
+## **3. Additional Hands-On Activities**
+### **Activity 1: Find and Analyze System Information**
+- **Windows:** Run `systeminfo` in PowerShell or Command Prompt.
+- **Linux:** Run `uname -a` and `lsb_release -a`.
+
+### **Activity 2: Monitor System Processes**
+- **Windows:** Run `Get-Process` in PowerShell.
+- **Linux:** Run `ps aux | less` in the terminal.
+
+### **Activity 3: Automate User Account Management**
+- **Windows:** Create a new user using PowerShell:
+   ```powershell
+   New-LocalUser -Name "student" -Password (ConvertTo-SecureString "P@ssword123" -AsPlainText -Force) -FullName "Student Account" -Description "Test account"
+   ```
+- **Linux:** Create a new user and set a password:
+   ```bash
+   sudo adduser student
+   sudo passwd student
+   ```
