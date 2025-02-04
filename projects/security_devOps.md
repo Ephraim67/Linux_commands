@@ -1,6 +1,6 @@
 ### **Advanced AWS Security & Cloud Cost Optimization Projects**  
 
-If you're looking to **enhance security automation** and **reduce cloud costs**, these projects focus on **AWS IAM, GuardDuty, AWS WAF, and cost optimization tools like AWS Compute Optimizer and Cost Explorer.**
+**Enhance security automation** and **reduce cloud costs**, these projects focus on **AWS IAM, GuardDuty, AWS WAF, and cost optimization tools like AWS Compute Optimizer and Cost Explorer.**
 
 ---
 
