@@ -38,7 +38,7 @@
 
 ### **Tasks:**
 1. **Install Wireshark:**
-   - Run: `sudo apt install wireshark -y` (Linux) or download from [Wireshark's website](https://www.wireshark.org/).
+   - Run: `sudo apt install wireshark -y` (Linux) or download from [Wireshark's website](https://www.wireshark.org/). (Don't bother installing wireshark if you're using kali)
    
 2. **Capture Network Traffic:**
    - Open Wireshark, select an active network interface, and start capturing.
