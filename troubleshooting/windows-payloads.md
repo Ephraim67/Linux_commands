@@ -141,5 +141,3 @@ exploit -j
 - **Windows 7 (with AV):** Encoded payload or `reverse_https`
 - **Windows 8 (firewalled):** `reverse_http` or `reverse_https`
 - **Stealthy attack:** PowerShell payloads or macro-based payloads
-
-Let me know if you need help with anything specific.
