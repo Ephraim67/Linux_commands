@@ -2,8 +2,8 @@
 
 A spy needs to send a secret message to their handler without raising suspicion. The message is hidden inside an innocent-looking image. Your goal is to extract the image.
 
-## Method: Using a Wordlist Attack (Bruteforce with StegCracker)
-StegCracker automates brute-forcing passwords against steghide-protected images.
+## Method: Using a Wordlist Attack (Bruteforce with Stegseek)
+Stegseek automates brute-forcing passwords against steghide-protected images.
 # 1. Install Stegseek
 Install Stegseek from this github page https://github.com/RickdeJager/stegseek
 
