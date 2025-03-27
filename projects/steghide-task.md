@@ -34,3 +34,11 @@ Get the hidden content and submit your response on this form https://docs.google
     base64 -d secret_image.txt > recovered.jpg
     ``` 
 - Extract the hidden content and save the response to the form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing, and If the password is unknown, attempt common password lists or brute force methods using a ```stegseek``` tool.
+
+
+# Challenge 2: The Encrypted Audio File (DeepSound & Sonic Visualiser)
+
+**Scenario:**
+A hacker is smuggling confidential data inside an audio file. Your job as a forensic analyst is to extract it.
+
+
