@@ -33,4 +33,4 @@ Get the hidden content and submit your response on this form https://docs.google
     ```bash
     base64 -d secret_image.txt > recovered.jpg
     ``` 
-- Extract the hidden content and save the response to the form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing
+- Extract the hidden content and save the response to the form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing, and If the password is unknown, attempt common password lists or brute force methods using a ```stegseek``` tool.
