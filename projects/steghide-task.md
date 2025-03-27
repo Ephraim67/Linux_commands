@@ -9,8 +9,7 @@ StegCracker automates brute-forcing passwords against steghide-protected images.
 pip install stegcracker
 ```
 
-Link to the image https://github.com/Ephraim67/Linux_commands/blob/main/projects/steghide-task.md
-
+Link to the image https://www.dropbox.com/scl/fi/1ovp3i2b44hp7qom58383/sample.zip?rlkey=4yfdu8tyr5sog792qpavrmeu2&st=ekm1enbr&dl=0
 # 2. Use a Wordlist to Crack the Password
 ```bash
 stegcracker sample.jpg (create a wordlists)
