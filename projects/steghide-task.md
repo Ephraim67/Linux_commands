@@ -19,4 +19,4 @@ time stegseek image.jpeg worldlist
 ```
 
 ## 3. You should be able to find the hidden message and the contents.
-Get the hidden content and fill the form
+Get the hidden content and submit your response on this form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing
