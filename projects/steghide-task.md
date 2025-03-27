@@ -10,7 +10,7 @@ Install Stegseek from this github page https://github.com/RickdeJager/stegseek
 Link to the image https://www.dropbox.com/scl/fi/1ovp3i2b44hp7qom58383/sample.zip?rlkey=4yfdu8tyr5sog792qpavrmeu2&st=ekm1enbr&dl=0
 # 2. Use a Wordlist to Crack the Password
 ```bash
-stegcracker sample.jpg (create a wordlists)
+time stegseek image.jpeg worldlist
 ```
 
 # 3. You should be able to find the hidden message and the contents.
