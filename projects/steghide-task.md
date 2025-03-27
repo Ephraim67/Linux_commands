@@ -6,7 +6,6 @@ A spy needs to send a secret message to their handler without raising suspicion.
 StegCracker automates brute-forcing passwords against steghide-protected images.
 # 1. Install StegCracker
 ```bash
-sudo apt install steghide
 pip install stegcracker
 ```
 
