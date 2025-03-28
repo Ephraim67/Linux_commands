@@ -41,6 +41,8 @@ Get the hidden content and submit your response on this form https://docs.google
 **Scenario:**
 An underground hacking group shares sensitive information using images. The real message is hidden inside a **QR code** embedded within another image.
 
+https://imagemagick.org/script/composite.php 
+
 Download image from https://www.dropbox.com/scl/fi/6zcun8ujnmg2wgwxwi5o4/stego_image.png.tar.gz?rlkey=f2oeewzwrcct056e3cxs565yx&st=mg59w6z8&dl=0
 
 ## **1. Open the Image in Stegsolve**
