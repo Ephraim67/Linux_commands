@@ -36,7 +36,7 @@ Get the hidden content and submit your response on this form https://docs.google
 - Extract the hidden content and save the response to the form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing, and If the password is unknown, attempt common password lists or brute force methods using a ```stegseek``` tool.
 
 
-# Challenge 3: Hidden QR Code (Advanced Image Steganography)
+# Challenge 2: Hidden QR Code (Advanced Image Steganography)
 
 **Scenario:**
 An underground hacking group shares sensitive information using images. The real message is hidden inside a **QR code** embedded within another image.  
