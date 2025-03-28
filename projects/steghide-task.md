@@ -36,9 +36,37 @@ Get the hidden content and submit your response on this form https://docs.google
 - Extract the hidden content and save the response to the form https://docs.google.com/forms/d/e/1FAIpQLScPeTRSHloUYzJTJR_aJ6Nj69Y24u7UAcUgkkvsvWDREOw4Nw/viewform?usp=sharing, and If the password is unknown, attempt common password lists or brute force methods using a ```stegseek``` tool.
 
 
-# Challenge 2: The Encrypted Audio File (DeepSound & Sonic Visualiser)
+# Challenge 3: Hidden QR Code (Advanced Image Steganography)
 
 **Scenario:**
-A hacker is smuggling confidential data inside an audio file. Your job as a forensic analyst is to extract it.
+An underground hacking group shares sensitive information using images. The real message is hidden inside a **QR code** embedded within another image.  
+
+## **1. Open the Image in Stegsolve**
+Use **Stegsolve**, a Java-based tool for steganography analysis.
+
+#### **Install Stegsolve (Java Required)**
+1. Download Stegsolve from:  
+   **[https://www.caesum.com/handbook/Stegsolve.jar](https://www.caesum.com/handbook/Stegsolve.jar)**
+2. Run it:
+   ```bash
+   java -jar Stegsolve.jar
+   ```
+
+#### **Analyze the Image Using Color Planes**
+1. **Open `stego_image.png`** in Stegsolve.
+2. Click through the different **color planes** (Red, Green, Blue, Alpha).
+3. **Look for patterns resembling a QR code**.
+
+### **2. Extract & Scan the QR Code**
+Once you identify the QR code:
+1. **Take a screenshot** of the QR code.
+2. Use **zbarimg** (Linux) or a QR scanner app to decode it.
+
+#### **Extract with zbarimg (Linux)**
+```bash
+zbarimg extracted_qr.png
+```
+This will reveal the **hidden URL or message**.
+
 
 
