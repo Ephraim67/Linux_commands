@@ -50,7 +50,7 @@ Use **Stegsolve**, a Java-based tool for steganography analysis.
 
 #### **Install Stegsolve (Java Required)**
 1. Download Stegsolve from:  
-   **[https://www.caesum.com/handbook/Stegsolve.jar](https://www.caesum.com/handbook/Stegsolve.jar)**
+   **https://github.com/zardus/ctf-tools/blob/master/stegsolve/install**
 2. Run it:
    ```bash
    java -jar Stegsolve.jar
