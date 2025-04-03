@@ -53,7 +53,7 @@ Use **Stegsolve**, a Java-based tool for steganography analysis.
    **https://github.com/zardus/ctf-tools/blob/master/stegsolve/install**
 2. Run it:
    ```bash
-   java -jar Stegsolve.jar
+   java -jar stegsolve.jar
    ```
 
 #### **Analyze the Image Using Color Planes**
