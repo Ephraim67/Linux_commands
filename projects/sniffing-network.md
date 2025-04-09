@@ -36,7 +36,7 @@ sudo tcpdump -i eth0 -nn -v -w capture.pcap
 Perform simple actions like:
 - Visit a website (`localhost/dvwa`)
 - Use `ping` or `nslookup` from terminal
-- Optionally, use `ftp` or `telnet` to connect to a local server
+- Use `ftp` or `telnet` to connect to a local server
 
 This generates traffic Wireshark can observe.
 
@@ -56,7 +56,10 @@ In Wireshark:
   tcp.port == 21
   ```
 
-Try to:
+Use:
+1. Open **Wireshark**.
+2. Load the captured file.
+3. Try to:
 - Identify the source and destination IPs
 - Observe TCP handshakes
 - See what sites or hosts were contacted
