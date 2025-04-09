@@ -50,7 +50,7 @@
 - Time-to-click stats
 
 #### 5. Awareness & Defense Material
-Explain student/team must create:
+Explain:
   - How this attack works
   - Red flags to watch for
   - Technical and non-technical defenses (e.g., email filtering, user training, browser hardening)
