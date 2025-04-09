@@ -27,16 +27,10 @@ By the end of this exercise, you will:
 ### **Tasks**
 
 #### **Step 1: Start a Packet Capture**
-1. Open **Wireshark**.
-2. Select the appropriate network interface (e.g., eth0, wlan0, or enp0s3).
-3. Start capturing packets.
-
-If using **tcpdump** (Linux):
+Use **tcpdump** to capture traffic:
 ```bash
-sudo tcpdump -i eth0 -w capture.pcap
+sudo tcpdump -i eth0 -nn -v -w capture.pcap
 ```
-
----
 
 #### **Step 2: Generate Traffic**
 Perform simple actions like:
