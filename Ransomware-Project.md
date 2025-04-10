@@ -1,4 +1,4 @@
-# Webdeves Ethical Hacking Project (Group A)
+# Webdeves Ethical Hacking Project (Team Evil)
 # Ransomware Simulator Project (Ethical Hacking Lab)
 
 ## Objective
