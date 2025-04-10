@@ -67,6 +67,10 @@ def setup_logger():
 def log_activity(msg):
     logging.info(msg)
 ```
+## requirements.txt
+```bash
+colorama
+```
 
 
 # Module Breakdown
@@ -86,9 +90,9 @@ def log_activity(msg):
 - Encode/decode helpers
 
 **reverse_shell/config.py**
--IP address
-Port
-Timeouts
+- IP address
+- Port
+- Timeouts
 
 ### Key Files:
 1. **client.py**: Reverse shell client script.
