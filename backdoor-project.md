@@ -15,6 +15,26 @@ reverse_shell_simulator/
 └── demo_files/             # Files for testing reverse shell (e.g. text files)
 ```
 
+- client.py – Reverse shell (victim side)
+- server.py – Command and control (attacker side)
+- config.py – Central settings
+- utils.py – Reusable helpers
+- requirements.txt – Dependencies
+
+## reverse_shell/config.py
+```python
+# config.py
+
+# Attacker IP and Port
+ATTACKER_IP = "127.0.0.1"  # Change to your VM IP if needed
+ATTACKER_PORT = 4444
+
+# Buffer and Retry
+BUFFER_SIZE = 4096
+RETRY_DELAY = 5  # Seconds between reconnect attempts
+```
+
+
 # Module Breakdown
 **reverse_shell/client.py**
 - Auto-reconnect loop
