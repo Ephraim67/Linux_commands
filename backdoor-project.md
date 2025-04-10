@@ -94,6 +94,53 @@ colorama
 - Port
 - Timeouts
 
+## **Core Python Modules (Standard Library)**
+
+| Module         | Purpose |
+|----------------|--------|
+| `socket`       | Create TCP connections for reverse shell (client/server). |
+| `subprocess`   | Run shell commands on the client (victim) side. |
+| `os`           | For file path operations, navigating directories, etc. |
+| `time`         | For implementing reconnection delays. |
+| `sys`          | For handling system-level interactions (like exiting cleanly). |
+| `threading`    | To handle receiving/sending simultaneously (optional). |
+| `base64`       | For encoding/decoding file data or messages. |
+| `logging`      | To implement logging of activities. |
+| `platform`     | For getting OS information (could be useful to identify the host). |
+
+## **Optional Third-Party Modules**
+
+If you want to add color, encryption, or better UX:
+
+| Module         | Purpose |
+|----------------|--------|
+| [`colorama`](https://pypi.org/project/colorama/)   | Print colored banners/messages in terminal (cross-platform). |
+| [`cryptography`](https://cryptography.io/en/latest/) | Encrypt communication (e.g., AES or Fernet encryption of payloads). |
+| [`pyfiglet`](https://pypi.org/project/pyfiglet/)    | Fancy ASCII banners for `utils.py` (optional aesthetic). |
+| [`rich`](https://pypi.org/project/rich/)            | For more advanced CLI output and logging (optional). |
+
+To install the third-party modules:
+```bash
+pip install colorama cryptography pyfiglet rich
+```
+
+## Example `requirements.txt`
+```txt
+colorama
+cryptography
+pyfiglet
+rich
+```
+
+## Bonus Module Ideas (for extensions)
+
+| Module         | Use Case |
+|----------------|----------|
+| `hashlib`      | File integrity checking (MD5/SHA256 checks for uploads/downloads). |
+| `json`         | Structured messaging between client and server (instead of raw strings). |
+| `select`       | For non-blocking sockets and better scalability. |
+| `ssl`          | Wrap socket with SSL/TLS (for encrypted shell). |
+
 ### Key Files:
 1. **client.py**: Reverse shell client script.
 2. **server.py**: Attacker's listening server.
