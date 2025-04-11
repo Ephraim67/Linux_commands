@@ -47,6 +47,117 @@ You wiil learn how brute-force attacks work by simulating password attacks on a 
 - Then implement security features and rerun the attack to demonstrate prevention.
 - Bonus: Deploy it on a private LAN or local VM lab.
 
+## **PHASE 1: Build the Target – Flask Login Server**
+
+### Goal: Create a vulnerable login system for the bruteforce to attack.
+
+**Steps:**
+1. Set up a simple Flask app:
+   - One `/login` route with a login form (username/password).
+   - Basic authentication against hardcoded or SQLite-stored credentials.
+2. Store:
+   - `users.db` with usernames and hashed passwords (`werkzeug.security`).
+   - A `login_attempts` table with IP address and timestamp.
+
+**Example snippet:**
+```python
+@app.route('/login', methods=['POST'])
+def login():
+    username = request.form['username']
+    password = request.form['password']
+    # validate with DB and return success/fail
+```
+
+## **PHASE 2: Simulate the Attack – Brute-Forcer Script**
+
+### Goal: Create an attacker script to bruteforce the login page.
+
+**Steps:**
+1. Use `requests` to send POST data to the `/login` endpoint.
+2. Load wordlist (`rockyou.txt` or custom list).
+3. Log results, time taken, and success/failure.
+
+**Python script example (CLI):**
+```python
+python bruteforce.py --url http://localhost:5000/login --username admin --wordlist rockyou.txt
+```
+
+Use `argparse` to configure the attack. Optionally, support attacking SSH using `paramiko`.
+
+## **PHASE 3: Add Logging and Metrics**
+
+### Goal: Track and visualize attack attempts.
+
+1. Log every login attempt to a file and/or database:
+   - IP, username, success/fail, timestamp.
+2. Use `matplotlib` or `seaborn` to plot:
+   - Total attempts over time.
+   - Success/failure rate before and after defense mechanisms.
+
+## **PHASE 4: Implement Defense Mechanisms (Blue Team Mode)**
+
+### Goal: Make the login system more secure.
+
+**Defense Features to Implement:**
+
+| Feature             | Description                                                       |
+|---------------------|-------------------------------------------------------------------|
+| Rate Limiting       | Limit to 5 attempts per IP per 60 seconds.                        |
+| Account Lockout     | Lock account for X minutes after Y failed attempts.               |
+| CAPTCHA (Bonus)     | Show CAPTCHA after 3 failed tries (can be simulated).             |
+| 2FA (Bonus)         | Add a mock OTP after password success.                            |
+
+Use `Flask-Limiter` for rate-limiting or write your own middleware logic.
+
+## **PHASE 5: Re-run Attacks & Compare Results**
+
+### Goal: Show the impact of your defenses.
+
+1. Run the same brute-force script against the hardened Flask app.
+2. Capture:
+   - Time taken
+   - Number of attempts allowed
+   - Whether the user was blocked or not
+3. Generate graphs to compare before vs after.
+
+## **EXTRA (Optional)**
+
+- Build a **dashboard** (Flask + Charts.js or matplotlib images) to show real-time attack logs.
+- Deploy the setup on a LAN with VMs (attacker Kali, target Ubuntu/Flask).
+- Integrate CVE demos or OWASP Top 10 reference in your README.
+
+## Project Folder Structure
+
+```
+brute-force-simulator/
+├── flask_server/
+│   ├── app.py
+│   ├── database.py
+│   ├── login.html
+│   ├── defense.py
+│   └── utils.py
+├── attacker/
+│   ├── bruteforce.py
+│   ├── wordlists/
+│   └── logs/
+├── analysis/
+│   ├── visualize.py
+│   └── attack_stats.csv
+├── README.md
+├── requirements.txt
+└── screenshots/
+```
+
+## Bonus Tips
+
+- Add colored terminal output (e.g., `colorama`) in the bruteforce script for UX.
+- Rate limit with `Flask-Limiter`:  
+  ```python
+  limiter = Limiter(app, key_func=get_remote_address, default_limits=["5 per minute"])
+  ```
+- Use `sqlite3` to persist user/attempt data with timestamps.
+- Track IPs using `request.remote_addr`.
+
 ### **Deliverables**:
 - Python code for:
   - Flask login system
