@@ -7,3 +7,8 @@
 ### Step 3 - Detect the SMTP Service is running with nmap
 
 ### Step 4 — Service Version Detection
+
+##### Reference:
+- Command to install the service
+- Command to update kali
+- nmap command
