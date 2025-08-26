@@ -60,6 +60,7 @@ search vnc
 
 * `auxiliary/scanner/vnc/vnc_none_auth`
 * `exploit/multi/vnc/vnc_keyboard_exec`
+* `auxiliary/scanner/vnc/vnc_login`
 
 
 
