@@ -45,7 +45,7 @@ This will:
 ### Step 3: Decryption
 You’ll use the `decryptor.py` script and the `key.key` file to recover the original files. This will simulate what happens when a victim "pays the ransom".
 
----
+
 
 ## decryptor.py (To be added)
 You will load:
@@ -59,7 +59,7 @@ You will load:
 - Explore defense mechanisms and detection strategies
 - Discuss ethical and legal implications of malware simulation
 
----
+
 
 ## Extension Ideas
 - Add a GUI popup with countdown timer
@@ -67,15 +67,15 @@ You will load:
 - Add basic persistence (autostart simulation)
 - Build a basic ransomware detector script (blue team exercise)
 
----
 
-## 📬 Submission Checklist
+
+##  Submission Checklist
 - [ ] `encryptor.py` script completed
 - [ ] `decryptor.py` script created
 - [ ] Test run and screenshot of encrypted files
 - [ ] Report (1 page): What you learned + detection methods
 
----
+
 
 ## Ethics Reminder
 This project is for educational cybersecurity use only. Misusing this knowledge is illegal and unethical. Respect privacy, security, and laws at all times.
