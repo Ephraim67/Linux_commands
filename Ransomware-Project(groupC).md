@@ -1,9 +1,8 @@
-# Webdeves Ethical Hacking Project (Team Evil)
+# Webdeves Ethical Hacking Project
 # Ransomware Simulator Project (Ethical Hacking Lab)
 
 ## Objective
-Simulate a ransomware attack in a controlled environment to understand how file encryption and ransom messages work. This project is strictly for **educational purposes** and should only be executed inside **virtual machines** on **test files** but will be used to build your confidence as an ethical hacker.
-
+Simulate a ransomware attack in a controlled environment to understand how file encryption and ransom messages work. 
 
 ## Project Structure
 ```
